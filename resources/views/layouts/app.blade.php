@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse" id="navbarsExample02">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Football</a>
+                  <a class="nav-link" href="football">Football</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Basketball</a>
+                  <a class="nav-link" href="basketball">Basketball</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Handball</a>
+                    <a class="nav-link" href="handball">Handball</a>
                 </li>
               </ul>
               {{-- <form class="form-inline my-2 my-md-0">

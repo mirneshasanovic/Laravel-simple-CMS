@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/sport', 'PostController@index');
 Route::get('/create', 'PostController@create');
 Route::post('/store', 'PostController@store')->name('store');
+Route::get('/football', 'PostController@football')->name('football');
+Route::get('/handball', 'PostController@handball')->name('handball');
+Route::get('/basketball', 'PostController@basketball')->name('basketball');
 
 Auth::routes();
 
