@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/sport', 'PostController@index');
+Route::get('/create', 'PostController@create');
+Route::post('/store', 'PostController@store')->name('store');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

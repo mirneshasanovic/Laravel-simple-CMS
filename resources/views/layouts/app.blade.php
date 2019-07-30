@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -37,14 +38,17 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Handball</a>
-                  </li>
+                </li>
               </ul>
-              <form class="form-inline my-2 my-md-0">
+              {{-- <form class="form-inline my-2 my-md-0">
                 <input class="form-control" type="text" placeholder="Search">
-              </form>
+              </form> --}}
             </div>
             <ul class="navbar-nav ml-auto">
               <!-- Authentication Links -->
+              <li class="nav-item">
+                <a class="nav-link" href="create">Create Post</a>
+            </li>
               @guest
                   <li class="nav-item">
                       <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

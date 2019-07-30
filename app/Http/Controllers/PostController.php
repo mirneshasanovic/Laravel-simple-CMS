@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -34,7 +34,33 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->hasFile('image')){
+            //Get filename with the extension
+            $fileNameWithExt = $request->file('image')->getClientOriginalName();
+            //Get just filename
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            //Get just extension
+            $extension = $request->file('image')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //Upload Image
+            $path = $request->file('image')->storeAs('public/images', $fileNameToStore);
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+        $post = new Post;
+        $post->title=$request->input('title');
+        $post->body=$request->input('body');
+        $post->label=$request->input('label');
+        $post->position=$request->input('position');
+        $post->image=$fileNameToStore;
+        $post->category=$request->input('name_of_sport');
+        
+        $post->user_id = Auth::user()->id;
+
+        $post->save();
+
+        return redirect('/home')->with('success', 'Post');
     }
 
     /**
