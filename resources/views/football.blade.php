@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
 <div class="row">
     <div class="col-sm-3">
         <div class="sidebar">      

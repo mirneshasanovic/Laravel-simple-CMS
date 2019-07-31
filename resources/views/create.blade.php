@@ -5,7 +5,7 @@
     {{ csrf_field() }}
         <div class="form-group">
                 {!! Form::label('name_of_sport', 'Category:', array('class' => 'boldfont')) !!}
-                {!! Form::select('name_of_sport', array('1' => 'Football', '2' => 'Basketball', '3' => 'Handball', '4' => 'Tennis' )); !!}
+                {!! Form::select('name_of_sport', array('1' => 'Football', '2' => 'Basketball', '3' => 'Handball')); !!}
         </div>
         <div class="form-group">
             {!! Form::label('position', 'Position of post', array('class' => 'boldfont')) !!}

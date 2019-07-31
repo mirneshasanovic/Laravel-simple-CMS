@@ -10,8 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script type="text/javascript" rel="script" src="{{asset('js/app.js')}}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -23,7 +22,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Sport Site</a>
+            <a class="navbar-brand" href="sport">Sport Site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -83,7 +82,8 @@
         <div class="container">
             <main class="py-4">
                 @yield('content')
-            </main>
+                @yield('js')
+            </main>           
         </div>
     </div>
 </body>

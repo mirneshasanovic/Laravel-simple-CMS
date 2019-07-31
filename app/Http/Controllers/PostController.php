@@ -15,7 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('sport');
+        $sidebar_left = Post::inRandomOrder()->paginate(3);
+        $center = Post::inRandomOrder()->paginate(1);
+        $sidebar_right = Post::inRandomOrder()->paginate(3);
+        $footer = Post::inRandomOrder()->paginate(4);
+        return view ('sport')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer);
     }
 
     /**
