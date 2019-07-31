@@ -48,7 +48,10 @@
                     </div>
                 </a>        
             @endforeach
-        </div>          
+        </div>
+        <div class="thumbnail">
+            <img style="width:100%; height:50%" src="storage/images/Bundesliga.png">
+        </div>            
     </div>
 
     <div class="col-sm-3">

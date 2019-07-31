@@ -43,11 +43,14 @@
                         <br>
                         <div class="thumbnail">
                             {!! (str_limit(strip_tags($post->body), 300, ' '))!!} <a href="/posts/{{$post->id}}"> Nastavi citati...</a>                             
-                        </div>     
+                        </div> 
                     </div>
                 </a>        
-            @endforeach
-        </div>          
+            @endforeach    
+        </div>  
+        <div class="thumbnail">
+            <img style="width:100%; height:50%" src="storage/images/Bundesliga.png">
+        </div>        
     </div>
 
     <div class="col-sm-3">
