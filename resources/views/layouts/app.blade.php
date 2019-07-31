@@ -30,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarsExample02">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="football">Football</a>
+                  <a class="nav-link" href={{ route('football') }}>Football</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="basketball">Basketball</a>
+                  <a class="nav-link" href="{{ route('basketball') }}">Basketball</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="handball">Handball</a>
+                    <a class="nav-link" href="{{ route('handball') }}">Handball</a>
                 </li>
               </ul>
               {{-- <form class="form-inline my-2 my-md-0">

@@ -8,7 +8,7 @@
                 <a href="posts/{{$post->id}}">
                     <div class="sidebar-left">  
                         <div class="thumbnail">
-                                <img style="width:100%; height:20%" src="storage/images/{{$post->image}}">
+                                <img style="width:100%; height:20%" src="{{ asset("storage/images/".$post->image) }}">
                         </div>
                         <br/>
                         <div class="thumbnail">
