@@ -32,3 +32,34 @@ a.nav-link{
 @media (min-width: 1200px){
     .container {
     min-width: 80%;}}
+.footer {
+    margin-top: 3%;
+}
+.thumbnail-epp {
+    height:20%;
+}
+.thumbnail-epp img{
+    height: 100%;
+    width: 100%;
+}
+#carouselExampleControls{
+    margin: 1%;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+.copyright{
+    text-align: center;
+}
+.thumbnail-title a{
+    font-size: x-large;
+    font-weight: bold;
+    color:  #000;
+    padding-left: 1%;
+}
+.carousel-item a{
+    color: #000000;
+}
+.thumbnail-body, .footer.thumbnail-title{
+    padding-left: 2%;
+}

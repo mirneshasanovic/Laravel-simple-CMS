@@ -77,19 +77,21 @@ class PostController extends Controller
      */
     public function football(Post $post)
     {
+        $post = Post::all();
         $sidebar_left = Post::orderBy('created_at', 'desc')->where('position','L')->where('category','1')->paginate(3);
         $center = Post::orderBy('created_at', 'desc')->where('position','C')->where('category','1')->paginate(1);
         $sidebar_right = Post::orderBy('created_at', 'desc')->where('position','R')->where('category','1')->paginate(3);
         $footer = Post::orderBy('created_at', 'desc')->where('category','1')->paginate(4);
-        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer);
+        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer)->with('photos',$post);
     }
     public function basketball(Post $post)
     {
+        $post = Post::all();
         $sidebar_left = Post::orderBy('created_at', 'desc')->where('position','L')->where('category','2')->paginate(3);
         $center = Post::orderBy('created_at', 'desc')->where('position','C')->where('category','2')->paginate(1);
         $sidebar_right = Post::orderBy('created_at', 'desc')->where('position','R')->where('category','2')->paginate(3);
         $footer = Post::orderBy('created_at', 'desc')->where('category','2')->paginate(4);
-        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer);
+        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer)->with('photos',$post);
     }
     public function handball(Post $post)
     {
@@ -97,7 +99,8 @@ class PostController extends Controller
         $center = Post::orderBy('created_at', 'desc')->where('position','C')->where('category','3')->paginate(1);
         $sidebar_right = Post::orderBy('created_at', 'desc')->where('position','R')->where('category','3')->paginate(3);
         $footer = Post::orderBy('created_at', 'desc')->where('category','3')->paginate(4);
-        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer);
+        $post = Post::all();
+        return view ('football')->with('sidebar_left',$sidebar_left)->with('center',$center)->with('sidebar_right',$sidebar_right)->with('footer',$footer)->with('photos',$post);
     }
     public function show($id)
     {

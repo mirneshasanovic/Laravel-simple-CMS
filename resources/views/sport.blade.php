@@ -12,10 +12,10 @@
                                 <img style="width:100%; height:20%" src="storage/images/{{$post->image}}">
                         </div>
                         <br/>
-                        <div class="thumbnail">
+                        <div class="thumbnail-title">
                             <a href="posts/{{$post->id}}"> {{$post->title}}</a>
                         </div>
-                        <div class="thumbnail">
+                        <div class="thumbnail-body">
                                 {!! (str_limit(strip_tags($post->body), 30, ' '))!!} <a href="/posts/{{$post->id}}">...</a>                                
                         </div>
                         <br/> 
@@ -34,16 +34,12 @@
                     </div>
                     <br>
                     <div class="title-and-body">
-                        <div class="thumbnail">
-                            <a href="posts/{{$post->id}}"> {{$post->label}}</a>
-                        </div>
-                        <br>
-                        <div class="thumbnail">
+                        <div class="thumbnail-title">
                             <a href="posts/{{$post->id}}"> {{$post->title}}</a>
                         </div>
                         <br>
-                        <div class="thumbnail">
-                            {!! (str_limit(strip_tags($post->body), 300, ' '))!!} <a href="/posts/{{$post->id}}"> Nastavi citati...</a>                             
+                        <div class="thumbnail-body">
+                            {!! (str_limit(strip_tags($post->body), 500, ' '))!!} <a href="/posts/{{$post->id}}"> Read more...</a>                             
                         </div>     
                     </div>
                 </a>        
@@ -60,10 +56,10 @@
                                     <img style="width:100%; height:20%" src="storage/images/{{$post->image}}">
                             </div>
                             <br/>
-                            <div class="thumbnail">
+                            <div class="thumbnail-title">
                                 <a href="posts/{{$post->id}}"> {{$post->title}}</a>
                             </div>
-                            <div class="thumbnail">
+                            <div class="thumbnail-body">
                                     {!! (str_limit(strip_tags($post->body), 30, ' '))!!} <a href="/posts/{{$post->id}}">...</a>                                
                             </div>
                             <br/> 
@@ -84,7 +80,7 @@
                                         </div>
                                         <br>
                                         <div class="title-and-body">
-                                            <div class="thumbnail">
+                                            <div class="thumbnail-title">
                                                 <a href="posts/{{$post->id}}"> {{$post->title}}</a>
                                             </div>
                                             <br>
